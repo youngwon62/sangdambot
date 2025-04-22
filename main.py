@@ -123,6 +123,21 @@ async def send_summary_email(data: EmailSummaryRequest):
             smtp.starttls()
             smtp.login(os.environ.get("EMAIL_USER"), os.environ.get("EMAIL_PASSWORD"))
             smtp.send_message(msg)
+
+        # 텔레그램으로도 메시지 전송
+        result = send_to_telegram(TEACHER_CHAT_ID, body)
+
+        return {
+            "status": "sent",
+            "email": "hyesulee14@gmail.com",
+            "telegram_result": result
+        }
+
+    except Exception as e:
+        return {
+            "status": "error",
+            "details": str(e)
+        }
         result = send_to_telegram(TEACHER_CHAT_ID, body)
 return {"status": "sent", "email": "hyesulee14@gmail.com", "telegram_result": result}
     except Exception as e:
