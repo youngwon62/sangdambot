@@ -1,0 +1,682 @@
+{
+  "ARRR284Z": {
+    "student_id": "S2025001",
+    "name": "조우진",
+    "grade": 2,
+    "class": 3,
+    "number": 1,
+    "birth": "2010-08-05",
+    "address": "서울특별시 마포구 망원동 41-25",
+    "dream_job": "의사",
+    "emotional_state": "자신감 결여",
+    "guardian": {
+      "name": "차정남",
+      "relation": "모",
+      "phone": "044-191-5220",
+      "email": "ujeon@jusighoesa.com",
+      "job": "법률관련 사무원"
+    },
+    "last_counseling": {
+      "date": "2025-03-09",
+      "type": "생활",
+      "summary": "Nam quia quia neque."
+    },
+    "relationship": {
+      "close_with": "우지민",
+      "hostile_with": "구영수",
+      "description": "우지민 학생과 자주 어울리며 조용한 성향을 보임."
+    },
+    "지필평가": 74,
+    "수행평가": 82,
+    "학기 종합 성적": 3.82,
+    "성적 추이": "유지 중",
+    "점심을 함께 먹는 친구": "우지민",
+    "조별활동 참여 패턴": "조용히 따르는 편"
+  },
+  "P0YKIYGQ": {
+    "student_id": "S2025002",
+    "name": "송지우",
+    "grade": 2,
+    "class": 3,
+    "number": 2,
+    "birth": "2010-02-03",
+    "address": "서울특별시 마포구 상암동 67-8",
+    "dream_job": "엔지니어",
+    "emotional_state": "외향적",
+    "guardian": {
+      "name": "구재호",
+      "relation": "모",
+      "phone": "053-159-0240",
+      "email": "seoyeongim@live.com",
+      "job": "음식서비스관련 관리자"
+    },
+    "last_counseling": {
+      "date": "2025-02-12",
+      "type": "성적",
+      "summary": "Repudiandae rem id."
+    },
+    "relationship": {
+      "close_with": "하영일",
+      "hostile_with": "박지민",
+      "description": "하영일 학생과 점심시간을 함께 보내며 긍정적인 교우 관계를 형성함."
+    },
+    "지필평가": 62,
+    "수행평가": 76,
+    "학기 종합 성적": 3.31,
+    "성적 추이": "유지 중",
+    "점심을 함께 먹는 친구": "하영일",
+    "조별활동 참여 패턴": "관찰 중심"
+  },
+  "0AAJVD1X": {
+    "student_id": "S2025003",
+    "name": "김상호",
+    "grade": 2,
+    "class": 3,
+    "number": 3,
+    "birth": "2010-11-16",
+    "address": "서울특별시 마포구 동교동 19-29",
+    "dream_job": "교사",
+    "emotional_state": "화가 많음",
+    "guardian": {
+      "name": "김미숙",
+      "relation": "모",
+      "phone": "044-814-8787",
+      "email": "gimyeongmi@naver.com",
+      "job": "기타 경호 및 보안 관련 종사원"
+    },
+    "last_counseling": {
+      "date": "2025-04-09",
+      "type": "성적",
+      "summary": "Vel mollitia illo optio sed."
+    },
+    "relationship": {
+      "close_with": "강준영",
+      "hostile_with": "김준호",
+      "description": "강준영 학생과 경쟁 의식이 강해 때때로 충돌이 있음."
+    },
+    "지필평가": 86,
+    "수행평가": 79,
+    "학기 종합 성적": 4.19,
+    "성적 추이": "최근 급상승",
+    "점심을 함께 먹는 친구": "강준영",
+    "조별활동 참여 패턴": "소극적 참여"
+  },
+  "QT2V3W59": {
+    "student_id": "S2025004",
+    "name": "하영일",
+    "grade": 2,
+    "class": 1,
+    "number": 4,
+    "birth": "2010-11-26",
+    "address": "서울특별시 마포구 상암동 98-13",
+    "dream_job": "교사",
+    "emotional_state": "자신감 결여",
+    "guardian": {
+      "name": "박지연",
+      "relation": "부",
+      "phone": "053-634-6121",
+      "email": "si@daum.net",
+      "job": "택배원"
+    },
+    "last_counseling": {
+      "date": "2025-02-15",
+      "type": "진로",
+      "summary": "Eum nemo sequi quidem consequuntur."
+    },
+    "relationship": {
+      "close_with": "강준영",
+      "hostile_with": "서예준",
+      "description": "강준영 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
+    },
+    "지필평가": 94,
+    "수행평가": 78,
+    "학기 종합 성적": 4.46,
+    "성적 추이": "다소 하락",
+    "점심을 함께 먹는 친구": "강준영",
+    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+  },
+  "XTTIKD41": {
+    "student_id": "S2025005",
+    "name": "최민재",
+    "grade": 2,
+    "class": 2,
+    "number": 5,
+    "birth": "2010-11-15",
+    "address": "서울특별시 마포구 성산동 42-29",
+    "dream_job": "의사",
+    "emotional_state": "긍정적",
+    "guardian": {
+      "name": "김지우",
+      "relation": "모",
+      "phone": "052-675-4255",
+      "email": "jbag@baegim.com",
+      "job": "웹 및 멀티미디어 기획자"
+    },
+    "last_counseling": {
+      "date": "2025-01-17",
+      "type": "생활",
+      "summary": "Doloribus quos quia."
+    },
+    "relationship": {
+      "close_with": "서예준",
+      "hostile_with": "김상호",
+      "description": "서예준 학생과 경쟁 의식이 강해 때때로 충돌이 있음."
+    },
+    "지필평가": 62,
+    "수행평가": 62,
+    "학기 종합 성적": 3.1,
+    "성적 추이": "최근 급상승",
+    "점심을 함께 먹는 친구": "서예준",
+    "조별활동 참여 패턴": "의견을 잘 조율함"
+  },
+  "C5XUQVU2": {
+    "student_id": "S2025006",
+    "name": "강명자",
+    "grade": 2,
+    "class": 4,
+    "number": 6,
+    "birth": "2010-02-26",
+    "address": "서울특별시 마포구 망원동 34-22",
+    "dream_job": "경찰관",
+    "emotional_state": "불안정함",
+    "guardian": {
+      "name": "나준호",
+      "relation": "부",
+      "phone": "063-333-2121",
+      "email": "jeongsugim@baeicoe.com",
+      "job": "음료 제조관련 기계 조작원"
+    },
+    "last_counseling": {
+      "date": "2025-01-09",
+      "type": "생활",
+      "summary": "Nobis amet modi ipsa tenetur."
+    },
+    "relationship": {
+      "close_with": "최승민",
+      "hostile_with": "이영길",
+      "description": "최승민 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
+    },
+    "지필평가": 71,
+    "수행평가": 75,
+    "학기 종합 성적": 3.61,
+    "성적 추이": "상승 중",
+    "점심을 함께 먹는 친구": "최승민",
+    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+  },
+  "LCZ3SXDV": {
+    "student_id": "S2025007",
+    "name": "우지민",
+    "grade": 2,
+    "class": 4,
+    "number": 7,
+    "birth": "2010-06-04",
+    "address": "서울특별시 마포구 연남동 42-29",
+    "dream_job": "간호사",
+    "emotional_state": "안정적",
+    "guardian": {
+      "name": "한영순",
+      "relation": "모",
+      "phone": "063-989-1831",
+      "email": "seunghyeon82@igimyun.com",
+      "job": "컴퓨터 강사"
+    },
+    "last_counseling": {
+      "date": "2025-02-11",
+      "type": "성적",
+      "summary": "Officiis iusto expedita neque ex."
+    },
+    "relationship": {
+      "close_with": "구영수",
+      "hostile_with": "서예준",
+      "description": "구영수 학생과 같은 진로 목표를 공유하며 협력하는 경향이 있음."
+    },
+    "지필평가": 72,
+    "수행평가": 92,
+    "학기 종합 성적": 3.9,
+    "성적 추이": "다소 하락",
+    "점심을 함께 먹는 친구": "구영수",
+    "조별활동 참여 패턴": "관찰 중심"
+  },
+  "H00K6GXH": {
+    "student_id": "S2025008",
+    "name": "서예준",
+    "grade": 2,
+    "class": 2,
+    "number": 8,
+    "birth": "2010-02-17",
+    "address": "서울특별시 마포구 동교동 3-23",
+    "dream_job": "연구원",
+    "emotional_state": "외향적",
+    "guardian": {
+      "name": "심주원",
+      "relation": "모",
+      "phone": "064-720-7931",
+      "email": "jiyeonhan@naver.com",
+      "job": "문화/예술/디자인 및 영상관련 관리자"
+    },
+    "last_counseling": {
+      "date": "2025-02-09",
+      "type": "진로",
+      "summary": "Fugiat doloremque beatae assumenda in expedita."
+    },
+    "relationship": {
+      "close_with": "윤하은",
+      "hostile_with": "정승민",
+      "description": "윤하은 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
+    },
+    "지필평가": 99,
+    "수행평가": 79,
+    "학기 종합 성적": 4.65,
+    "성적 추이": "최근 급상승",
+    "점심을 함께 먹는 친구": "윤하은",
+    "조별활동 참여 패턴": "조용히 따르는 편"
+  },
+  "VN78ZQCD": {
+    "student_id": "S2025009",
+    "name": "윤하은",
+    "grade": 2,
+    "class": 4,
+    "number": 9,
+    "birth": "2010-04-10",
+    "address": "서울특별시 마포구 망원동 35-26",
+    "dream_job": "경찰관",
+    "emotional_state": "내향적",
+    "guardian": {
+      "name": "박정순",
+      "relation": "부",
+      "phone": "051-681-8018",
+      "email": "gimhyeonji@gogimi.com",
+      "job": "인터넷 판매원"
+    },
+    "last_counseling": {
+      "date": "2025-01-09",
+      "type": "성적",
+      "summary": "Fugiat hic libero dolorem."
+    },
+    "relationship": {
+      "close_with": "조우진",
+      "hostile_with": "송지우",
+      "description": "조우진 학생과 같은 진로 목표를 공유하며 협력하는 경향이 있음."
+    },
+    "지필평가": 84,
+    "수행평가": 99,
+    "학기 종합 성적": 4.42,
+    "성적 추이": "최근 급상승",
+    "점심을 함께 먹는 친구": "조우진",
+    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+  },
+  "PIQBQHOL": {
+    "student_id": "S2025010",
+    "name": "강준영",
+    "grade": 2,
+    "class": 3,
+    "number": 10,
+    "birth": "2010-02-10",
+    "address": "서울특별시 마포구 연남동 59-13",
+    "dream_job": "연구원",
+    "emotional_state": "자신감 결여",
+    "guardian": {
+      "name": "서영철",
+      "relation": "부",
+      "phone": "041-636-2150",
+      "email": "gimjungsu@dreamwiz.com",
+      "job": "출판물 전문가"
+    },
+    "last_counseling": {
+      "date": "2025-04-01",
+      "type": "생활",
+      "summary": "Voluptatem enim animi saepe porro deserunt nisi."
+    },
+    "relationship": {
+      "close_with": "구영수",
+      "hostile_with": "박지민",
+      "description": "구영수 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
+    },
+    "지필평가": 79,
+    "수행평가": 69,
+    "학기 종합 성적": 3.8,
+    "성적 추이": "다소 하락",
+    "점심을 함께 먹는 친구": "구영수",
+    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+  },
+  "98C22LYA": {
+    "student_id": "S2025011",
+    "name": "김준호",
+    "grade": 2,
+    "class": 1,
+    "number": 11,
+    "birth": "2010-07-19",
+    "address": "서울특별시 마포구 상암동 39-6",
+    "dream_job": "운동선수",
+    "emotional_state": "안정적",
+    "guardian": {
+      "name": "김영철",
+      "relation": "부",
+      "phone": "044-050-5857",
+      "email": "gimminseo@daum.net",
+      "job": "외선전공"
+    },
+    "last_counseling": {
+      "date": "2025-01-08",
+      "type": "성적",
+      "summary": "Perspiciatis dolor sit excepturi."
+    },
+    "relationship": {
+      "close_with": "이영길",
+      "hostile_with": "김상호",
+      "description": "이영길 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
+    },
+    "지필평가": 86,
+    "수행평가": 94,
+    "학기 종합 성적": 4.42,
+    "성적 추이": "상승 중",
+    "점심을 함께 먹는 친구": "이영길",
+    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+  },
+  "9Y3L7Q6L": {
+    "student_id": "S2025012",
+    "name": "박지민",
+    "grade": 2,
+    "class": 1,
+    "number": 12,
+    "birth": "2010-05-09",
+    "address": "서울특별시 마포구 성산동 5-4",
+    "dream_job": "경찰관",
+    "emotional_state": "우울 경향",
+    "guardian": {
+      "name": "성아름",
+      "relation": "모",
+      "phone": "041-645-9193",
+      "email": "munminseo@hagim.com",
+      "job": "제품 생산관련 관리자"
+    },
+    "last_counseling": {
+      "date": "2025-01-30",
+      "type": "성적",
+      "summary": "Reprehenderit minima ad vero asperiores eligendi."
+    },
+    "relationship": {
+      "close_with": "장지현",
+      "hostile_with": "윤하은",
+      "description": "장지현 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
+    },
+    "지필평가": 89,
+    "수행평가": 93,
+    "학기 종합 성적": 4.51,
+    "성적 추이": "다소 하락",
+    "점심을 함께 먹는 친구": "장지현",
+    "조별활동 참여 패턴": "관찰 중심"
+  },
+  "64FW3ZCJ": {
+    "student_id": "S2025013",
+    "name": "최승민",
+    "grade": 2,
+    "class": 4,
+    "number": 13,
+    "birth": "2010-07-28",
+    "address": "서울특별시 마포구 상암동 99-1",
+    "dream_job": "엔지니어",
+    "emotional_state": "우울 경향",
+    "guardian": {
+      "name": "오미영",
+      "relation": "부",
+      "phone": "044-493-7259",
+      "email": "seojunhong@dreamwiz.com",
+      "job": "양장 및 양복 제조원"
+    },
+    "last_counseling": {
+      "date": "2025-01-16",
+      "type": "진로",
+      "summary": "Sed eos consequuntur."
+    },
+    "relationship": {
+      "close_with": "박지민",
+      "hostile_with": "정승민",
+      "description": "박지민 학생과 자주 어울리며 조용한 성향을 보임."
+    },
+    "지필평가": 69,
+    "수행평가": 81,
+    "학기 종합 성적": 3.63,
+    "성적 추이": "최근 급상승",
+    "점심을 함께 먹는 친구": "박지민",
+    "조별활동 참여 패턴": "의견을 잘 조율함"
+  },
+  "406AUZ9X": {
+    "student_id": "S2025014",
+    "name": "이서영",
+    "grade": 2,
+    "class": 2,
+    "number": 14,
+    "birth": "2010-10-14",
+    "address": "서울특별시 마포구 상암동 7-10",
+    "dream_job": "프로그래머",
+    "emotional_state": "안정적",
+    "guardian": {
+      "name": "최영길",
+      "relation": "모",
+      "phone": "011-982-5570",
+      "email": "sonareum@yu.com",
+      "job": "전기/전자 및 기계 공학 시험원"
+    },
+    "last_counseling": {
+      "date": "2025-01-18",
+      "type": "생활",
+      "summary": "Molestiae reiciendis accusamus quibusdam soluta fuga modi suscipit."
+    },
+    "relationship": {
+      "close_with": "장서현",
+      "hostile_with": "김준호",
+      "description": "장서현 학생과 자주 어울리며 조용한 성향을 보임."
+    },
+    "지필평가": 86,
+    "수행평가": 72,
+    "학기 종합 성적": 4.09,
+    "성적 추이": "최근 급상승",
+    "점심을 함께 먹는 친구": "장서현",
+    "조별활동 참여 패턴": "소극적 참여"
+  },
+  "XZLLUH1Q": {
+    "student_id": "S2025015",
+    "name": "이영길",
+    "grade": 2,
+    "class": 4,
+    "number": 15,
+    "birth": "2010-02-20",
+    "address": "서울특별시 마포구 망원동 57-14",
+    "dream_job": "디자이너",
+    "emotional_state": "화가 많음",
+    "guardian": {
+      "name": "박예원",
+      "relation": "부",
+      "phone": "054-469-1984",
+      "email": "seojun38@yu.kr",
+      "job": "인문과학 연구원"
+    },
+    "last_counseling": {
+      "date": "2025-04-04",
+      "type": "진로",
+      "summary": "Officia iusto omnis dolor earum."
+    },
+    "relationship": {
+      "close_with": "우지민",
+      "hostile_with": "이서영",
+      "description": "우지민 학생과 자주 어울리며 조용한 성향을 보임."
+    },
+    "지필평가": 82,
+    "수행평가": 95,
+    "학기 종합 성적": 4.29,
+    "성적 추이": "상승 중",
+    "점심을 함께 먹는 친구": "우지민",
+    "조별활동 참여 패턴": "조용히 따르는 편"
+  },
+  "CW50Q91S": {
+    "student_id": "S2025016",
+    "name": "구영수",
+    "grade": 2,
+    "class": 1,
+    "number": 16,
+    "birth": "2010-09-22",
+    "address": "서울특별시 마포구 연남동 64-15",
+    "dream_job": "연구원",
+    "emotional_state": "긍정적",
+    "guardian": {
+      "name": "김현주",
+      "relation": "부",
+      "phone": "055-614-0636",
+      "email": "yeonghocoe@gimsonhan.com",
+      "job": "기타 스포츠 및 레크레이션 관련 전문가"
+    },
+    "last_counseling": {
+      "date": "2025-04-04",
+      "type": "성적",
+      "summary": "Accusamus molestias minima odio animi vel quibusdam."
+    },
+    "relationship": {
+      "close_with": "강명자",
+      "hostile_with": "서예준",
+      "description": "강명자 학생과 점심시간을 함께 보내며 긍정적인 교우 관계를 형성함."
+    },
+    "지필평가": 71,
+    "수행평가": 66,
+    "학기 종합 성적": 3.48,
+    "성적 추이": "상승 중",
+    "점심을 함께 먹는 친구": "강명자",
+    "조별활동 참여 패턴": "의견을 잘 조율함"
+  },
+  "0N1OEN85": {
+    "student_id": "S2025017",
+    "name": "정승민",
+    "grade": 2,
+    "class": 4,
+    "number": 17,
+    "birth": "2010-03-08",
+    "address": "서울특별시 마포구 상암동 69-7",
+    "dream_job": "간호사",
+    "emotional_state": "우울 경향",
+    "guardian": {
+      "name": "심영길",
+      "relation": "부",
+      "phone": "033-746-1019",
+      "email": "ujeongho@hotmail.com",
+      "job": "캐드원"
+    },
+    "last_counseling": {
+      "date": "2025-01-04",
+      "type": "진로",
+      "summary": "Nihil ipsum optio dolor numquam."
+    },
+    "relationship": {
+      "close_with": "권광수",
+      "hostile_with": "송지우",
+      "description": "권광수 학생과 경쟁 의식이 강해 때때로 충돌이 있음."
+    },
+    "지필평가": 62,
+    "수행평가": 62,
+    "학기 종합 성적": 3.1,
+    "성적 추이": "최근 급상승",
+    "점심을 함께 먹는 친구": "권광수",
+    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+  },
+  "AQA7E4PX": {
+    "student_id": "S2025018",
+    "name": "권광수",
+    "grade": 2,
+    "class": 1,
+    "number": 18,
+    "birth": "2010-07-03",
+    "address": "서울특별시 마포구 성산동 45-11",
+    "dream_job": "엔지니어",
+    "emotional_state": "우울 경향",
+    "guardian": {
+      "name": "배영일",
+      "relation": "모",
+      "phone": "032-843-0694",
+      "email": "yeongsug10@live.com",
+      "job": "기타 건설/전기 및 생산 관련 관리자"
+    },
+    "last_counseling": {
+      "date": "2025-02-18",
+      "type": "성적",
+      "summary": "Exercitationem sed officiis pariatur at sed."
+    },
+    "relationship": {
+      "close_with": "강명자",
+      "hostile_with": "구영수",
+      "description": "강명자 학생과 자주 어울리며 조용한 성향을 보임."
+    },
+    "지필평가": 63,
+    "수행평가": 98,
+    "학기 종합 성적": 3.67,
+    "성적 추이": "최근 급상승",
+    "점심을 함께 먹는 친구": "강명자",
+    "조별활동 참여 패턴": "관찰 중심"
+  },
+  "MVFE2RAH": {
+    "student_id": "S2025019",
+    "name": "장지현",
+    "grade": 2,
+    "class": 4,
+    "number": 19,
+    "birth": "2010-11-20",
+    "address": "서울특별시 마포구 상암동 70-5",
+    "dream_job": "교사",
+    "emotional_state": "긍정적",
+    "guardian": {
+      "name": "서지영",
+      "relation": "부",
+      "phone": "02-7089-6526",
+      "email": "ahwang@dreamwiz.com",
+      "job": "경기감독 및 코치"
+    },
+    "last_counseling": {
+      "date": "2025-03-23",
+      "type": "성적",
+      "summary": "Omnis porro id atque similique voluptatum."
+    },
+    "relationship": {
+      "close_with": "강준영",
+      "hostile_with": "최민재",
+      "description": "강준영 학생과 점심시간을 함께 보내며 긍정적인 교우 관계를 형성함."
+    },
+    "지필평가": 83,
+    "수행평가": 72,
+    "학기 종합 성적": 3.98,
+    "성적 추이": "다소 하락",
+    "점심을 함께 먹는 친구": "강준영",
+    "조별활동 참여 패턴": "조용히 따르는 편"
+  },
+  "JSDB63TU": {
+    "student_id": "S2025020",
+    "name": "장서현",
+    "grade": 2,
+    "class": 4,
+    "number": 20,
+    "birth": "2010-04-12",
+    "address": "서울특별시 마포구 성산동 2-20",
+    "dream_job": "프로그래머",
+    "emotional_state": "화가 많음",
+    "guardian": {
+      "name": "강예은",
+      "relation": "모",
+      "phone": "042-455-6500",
+      "email": "areum23@dreamwiz.com",
+      "job": "가스/에너지 기술자 및 연구원"
+    },
+    "last_counseling": {
+      "date": "2025-01-09",
+      "type": "생활",
+      "summary": "Qui alias suscipit ratione dignissimos asperiores sapiente."
+    },
+    "relationship": {
+      "close_with": "구영수",
+      "hostile_with": "김상호",
+      "description": "구영수 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
+    },
+    "지필평가": 91,
+    "수행평가": 75,
+    "학기 종합 성적": 4.31,
+    "성적 추이": "다소 하락",
+    "점심을 함께 먹는 친구": "구영수",
+    "조별활동 참여 패턴": "조용히 따르는 편"
+  }
+}
