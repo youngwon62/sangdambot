@@ -214,12 +214,12 @@ async def student_info_query(data: dict):
         "관계 설명": student.get("relationship", {}).get("description")
     }
 
-    # 등록된 이름 목록 생성
     registered_names = {info["name"] for info in STUDENT_CODE_DB.values()}
 
     def mask_names(text, allowed_names):
-        if not text:
-            return text
+        if not isinstance(text, str):
+            return str(text) if text is not None else "정보 없음"
+
         for word in text.split():
             if any(name in word for name in allowed_names):
                 continue
@@ -231,9 +231,8 @@ async def student_info_query(data: dict):
 
     matched = [v for k, v in keyword_map.items() if k in question]
 
-    if matched:
+    if matched and matched[0]:
         masked = mask_names(matched[0], registered_names)
         return {"result": masked}
     else:
         return {"result": "해당 질문에 대한 정보가 없습니다."}
-
