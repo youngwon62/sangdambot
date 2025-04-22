@@ -18,7 +18,7 @@ TELEGRAM_BOT_TOKEN = "7954320343:AAGGW8K8N3SDfaTeG7VIVhBUcut-T9v1aDY"
 TEACHER_CHAT_ID = "5560273829"
 
 # --- 인증 DB 로드 ---
-with open("student_profile_enriched_final.json", "r", encoding="utf-8") as f:
+with open("student_profile_enriched_final_v3.json", "r", encoding="utf-8") as f:
     STUDENT_CODE_DB = json.load(f)
 
 # --- 고정 시간표 ---
@@ -32,7 +32,6 @@ TEACHER_TIMETABLE = {
 ALL_PERIODS = [1, 2, 3, 4, 5, 6, 7]
 WEEKDAYS = ["월", "화", "수", "목", "금"]
 
-# --- 모델 정의 ---
 class ConsultRequest(BaseModel):
     student_code: str
     parent_message: str
@@ -46,13 +45,6 @@ class EmailSummaryRequest(BaseModel):
     summary: str
     preferred_time: str
 
-# --- 텔레그램 메시지 전송 ---
-def send_to_telegram(chat_id: str, text: str):
-    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    payload = {"chat_id": chat_id, "text": text}
-    return requests.post(url, json=payload).json()
-
-# --- 학생 코드 인증 ---
 @app.post("/verify_code")
 async def verify_code(request: Request):
     data = await request.json()
@@ -66,7 +58,6 @@ async def verify_code(request: Request):
         }
     return {"valid": False}
 
-# --- 상담 전송 ---
 @app.post("/send_consult")
 async def send_consult(data: ConsultRequest):
     student_info = STUDENT_CODE_DB.get(data.student_code)
@@ -80,10 +71,11 @@ async def send_consult(data: ConsultRequest):
 📅 희망 시간: {data.preferred_time}
 ⏰ 신청 시각: {data.timestamp}
 """
-    result = send_to_telegram(TEACHER_CHAT_ID, msg)
-    return {"status": "sent", "telegram_response": result}
+    result = requests.post(
+        f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
+        json={"chat_id": TEACHER_CHAT_ID, "text": msg})
+    return {"status": "sent", "telegram_response": result.json()}
 
-# --- 상담 주제 라우팅 ---
 @app.post("/route_topic")
 async def route_topic(request: Request):
     data = await request.json()
@@ -103,7 +95,6 @@ async def route_topic(request: Request):
             return {"category": label}
     return {"category": "기타 고민"}
 
-# --- 상담 요약 확인 ---
 @app.post("/confirm_summary")
 async def confirm_summary(data: EmailSummaryRequest):
     student_info = STUDENT_CODE_DB.get(data.student_code)
@@ -123,7 +114,6 @@ async def confirm_summary(data: EmailSummaryRequest):
 """
     return {"status": "pending", "confirm_message": confirm_msg}
 
-# --- 상담 요약 메일 + 텔레그램 전송 ---
 @app.post("/send_summary_email")
 async def send_summary_email(data: EmailSummaryRequest):
     student_info = STUDENT_CODE_DB.get(data.student_code)
@@ -149,13 +139,15 @@ async def send_summary_email(data: EmailSummaryRequest):
             smtp.login(os.environ.get("EMAIL_USER"), os.environ.get("EMAIL_PASSWORD"))
             smtp.send_message(msg)
 
-        result = send_to_telegram(TEACHER_CHAT_ID, body)
-        return {"status": "sent", "email": msg["To"], "telegram_result": result}
+        requests.post(
+            f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
+            json={"chat_id": TEACHER_CHAT_ID, "text": body})
+
+        return {"status": "sent", "email": msg["To"]}
 
     except Exception as e:
         return {"status": "error", "details": str(e)}
 
-# --- 교사 빈 시간표 조회 ---
 @app.get("/available_slots")
 async def available_slots():
     empty_slots = {}
@@ -164,7 +156,6 @@ async def available_slots():
         empty_slots[day] = empty
     return {"available_slots": empty_slots}
 
-# --- 출석 서류 업로드 ---
 @app.post("/upload_attendance_file")
 async def upload_attendance_file(student_code: str = Form(...), file: UploadFile = File(...)):
     student_info = STUDENT_CODE_DB.get(student_code)
@@ -173,7 +164,6 @@ async def upload_attendance_file(student_code: str = Form(...), file: UploadFile
 
     contents = await file.read()
 
-    # 이메일 전송
     msg = MIMEMultipart()
     msg["Subject"] = f"[출석 서류 제출] {student_info['name']} ({student_code})"
     msg["From"] = os.environ.get("EMAIL_USER")
@@ -190,13 +180,34 @@ async def upload_attendance_file(student_code: str = Form(...), file: UploadFile
             smtp.login(os.environ.get("EMAIL_USER"), os.environ.get("EMAIL_PASSWORD"))
             smtp.send_message(msg)
 
-        # 텔레그램 전송
-        tg_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument"
-        tg_payload = {"chat_id": TEACHER_CHAT_ID}
-        tg_file = {"document": (file.filename, contents)}
-        requests.post(tg_url, data=tg_payload, files=tg_file)
+        requests.post(
+            f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument",
+            data={"chat_id": TEACHER_CHAT_ID},
+            files={"document": (file.filename, contents)})
 
         return {"status": "ok"}
 
     except Exception as e:
         return {"status": "error", "details": str(e)}
+
+@app.post("/student_info_query")
+async def student_info_query(data: dict):
+    code = data.get("student_code")
+    question = data.get("question", "")
+    student = STUDENT_CODE_DB.get(code)
+
+    if not student:
+        return {"error": "유효하지 않은 학생 코드입니다."}
+
+    keyword_map = {
+        "지필": student.get("지필평가"),
+        "수행": student.get("수행평가"),
+        "종합": student.get("학기 종합 성적"),
+        "추이": student.get("성적 추이"),
+        "친구": student.get("가까운 친구"),
+        "점심": student.get("점심을 함께 먹는 친구"),
+        "조별": student.get("조별활동 참여 패턴")
+    }
+
+    matched = [v for k, v in keyword_map.items() if k in question]
+    return {"result": matched[0] if matched else "해당 질문에 대한 정보가 없습니다."}
