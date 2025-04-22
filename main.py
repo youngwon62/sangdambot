@@ -199,37 +199,48 @@ async def student_info_query(data: dict):
     if not student:
         return {"error": "유효하지 않은 학생 코드입니다."}
 
+    current_student_name = student.get("name", "")
+    registered_names = {info["name"] for info in STUDENT_CODE_DB.values()}
+
+    # 조회 키워드 매핑
     keyword_map = {
         "지필": student.get("지필평가"),
         "수행": student.get("수행평가"),
         "종합": student.get("학기 종합 성적"),
         "추이": student.get("성적 추이"),
-        "친구": student.get("가까운 친구"),
-        "점심": student.get("점심을 함께 먹는 친구"),
-        "조별": student.get("조별활동 참여 패턴"),
+        "친한 친구": student.get("relationship", {}).get("close_with"),
+        "가까운 친구": student.get("relationship", {}).get("close_with"),
+        "친구": student.get("relationship", {}).get("close_with"),
+        "적대적 관계": student.get("relationship", {}).get("hostile_with"),
+        "갈등": student.get("relationship", {}).get("hostile_with"),
+        "관계 설명": student.get("relationship", {}).get("description"),
         "최근 상담": f"{student.get('last_counseling', {}).get('date', '기록 없음')} - {student.get('last_counseling', {}).get('type', '')}: {student.get('last_counseling', {}).get('summary', '')}",
         "상담 내용": student.get("last_counseling", {}).get("summary"),
-        "친한 친구": student.get("relationship", {}).get("close_with"),
-        "적대적 관계": student.get("relationship", {}).get("hostile_with"),
-        "관계 설명": student.get("relationship", {}).get("description")
+        "점심": student.get("점심을 함께 먹는 친구"),
+        "조별": student.get("조별활동 참여 패턴")
     }
 
-    registered_names = {info["name"] for info in STUDENT_CODE_DB.values()}
-
-    def mask_names(text, allowed_names):
+    # ✔ 마스킹 함수
+    def mask_names(text, allowed_names, current_name):
         if not isinstance(text, str):
             return str(text) if text is not None else "정보 없음"
 
-        for word in text.split():
-            if any(name in word for name in allowed_names):
-                continue
-            if len(word) >= 2:
-                text = text.replace(word, word[0] + "○" * (len(word) - 1))
-            else:
-                text = text.replace(word, "비공개")
+        for name in allowed_names:
+            if name == current_name:
+                continue  # 본인 이름은 마스킹하지 않음
+            if name in text:
+                masked = name[0] + "○" * 2
+                text = text.replace(name, masked)
         return text
 
-    matched = [v for k, v in keyword_map.items() if k in question]
+    matched = next((v for k, v in keyword_map.items() if k in question and v), None)
+
+    if matched:
+        masked = mask_names(matched, registered_names, current_student_name)
+        return {"result": masked}
+    else:
+        return {"result": "해당 질문에 대한 정보가 없습니다."}
+
 
     if matched and matched[0]:
         masked = mask_names(matched[0], registered_names)
