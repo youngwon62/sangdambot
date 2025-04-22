@@ -45,6 +45,21 @@ class EmailSummaryRequest(BaseModel):
     summary: str
     preferred_time: str
 
+# --- 학생 코드 인증 ---
+@app.post("/verify_code")
+async def verify_code(request: Request):
+    data = await request.json()
+    code = data.get("student_code")
+    student_info = STUDENT_CODE_DB.get(code)
+    if student_info:
+        return {
+            "valid": True,
+            "name": student_info["name"],
+            "student_id": student_info["student_id"]
+        }
+    return { "valid": False }
+
+
 # --- 텔레그램 메시지 전송 ---
 def send_to_telegram(chat_id: str, text: str):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
