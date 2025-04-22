@@ -1,12 +1,14 @@
 # sangdambot FastAPI 서버: 상담 자동화 + 시간표 기능 포함
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, UploadFile, File, Form
 from pydantic import BaseModel
 from datetime import datetime
 import requests
 import json
 import smtplib
 from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
+from email.mime.multipart import MIMEMultipart
 import os
 
 app = FastAPI()
@@ -19,7 +21,7 @@ TEACHER_CHAT_ID = "5560273829"
 with open("student_profile_enriched_final.json", "r", encoding="utf-8") as f:
     STUDENT_CODE_DB = json.load(f)
 
-# --- 고정 시간표 (월~금 각 1~7교시, 총 35차시 중 수업 있는 시간만 지정) ---
+# --- 고정 시간표 ---
 TEACHER_TIMETABLE = {
     "월": [1, 2, 3, 4, 6],
     "화": [1, 2, 3, 5, 6],
@@ -27,7 +29,6 @@ TEACHER_TIMETABLE = {
     "목": [1, 2, 3, 6],
     "금": [1, 2, 4, 5]
 }
-
 ALL_PERIODS = [1, 2, 3, 4, 5, 6, 7]
 WEEKDAYS = ["월", "화", "수", "목", "금"]
 
@@ -45,6 +46,12 @@ class EmailSummaryRequest(BaseModel):
     summary: str
     preferred_time: str
 
+# --- 텔레그램 메시지 전송 ---
+def send_to_telegram(chat_id: str, text: str):
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    payload = {"chat_id": chat_id, "text": text}
+    return requests.post(url, json=payload).json()
+
 # --- 학생 코드 인증 ---
 @app.post("/verify_code")
 async def verify_code(request: Request):
@@ -57,15 +64,7 @@ async def verify_code(request: Request):
             "name": student_info["name"],
             "student_id": student_info["student_id"]
         }
-    return { "valid": False }
-
-
-# --- 텔레그램 메시지 전송 ---
-def send_to_telegram(chat_id: str, text: str):
-    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    payload = {"chat_id": chat_id, "text": text}
-    response = requests.post(url, json=payload)
-    return response.json()
+    return {"valid": False}
 
 # --- 상담 전송 ---
 @app.post("/send_consult")
@@ -151,18 +150,10 @@ async def send_summary_email(data: EmailSummaryRequest):
             smtp.send_message(msg)
 
         result = send_to_telegram(TEACHER_CHAT_ID, body)
-
-        return {
-            "status": "sent",
-            "email": "hyesulee14@gmail.com",
-            "telegram_result": result
-        }
+        return {"status": "sent", "email": msg["To"], "telegram_result": result}
 
     except Exception as e:
-        return {
-            "status": "error",
-            "details": str(e)
-        }
+        return {"status": "error", "details": str(e)}
 
 # --- 교사 빈 시간표 조회 ---
 @app.get("/available_slots")
@@ -172,3 +163,40 @@ async def available_slots():
         empty = [p for p in ALL_PERIODS if p not in TEACHER_TIMETABLE.get(day, [])]
         empty_slots[day] = empty
     return {"available_slots": empty_slots}
+
+# --- 출석 서류 업로드 ---
+@app.post("/upload_attendance_file")
+async def upload_attendance_file(student_code: str = Form(...), file: UploadFile = File(...)):
+    student_info = STUDENT_CODE_DB.get(student_code)
+    if not student_info:
+        return {"status": "error", "message": "학생 코드 오류"}
+
+    contents = await file.read()
+
+    # 이메일 전송
+    msg = MIMEMultipart()
+    msg["Subject"] = f"[출석 서류 제출] {student_info['name']} ({student_code})"
+    msg["From"] = os.environ.get("EMAIL_USER")
+    msg["To"] = ", ".join(["hyesulee14@gmail.com", "youngwon62@snu.ac.kr"])
+    msg.attach(MIMEText("첨부된 출석 서류를 확인해 주세요."))
+
+    part = MIMEApplication(contents, Name=file.filename)
+    part["Content-Disposition"] = f'attachment; filename="{file.filename}"'
+    msg.attach(part)
+
+    try:
+        with smtplib.SMTP("smtp.gmail.com", 587) as smtp:
+            smtp.starttls()
+            smtp.login(os.environ.get("EMAIL_USER"), os.environ.get("EMAIL_PASSWORD"))
+            smtp.send_message(msg)
+
+        # 텔레그램 전송
+        tg_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument"
+        tg_payload = {"chat_id": TEACHER_CHAT_ID}
+        tg_file = {"document": (file.filename, contents)}
+        requests.post(tg_url, data=tg_payload, files=tg_file)
+
+        return {"status": "ok"}
+
+    except Exception as e:
+        return {"status": "error", "details": str(e)}
