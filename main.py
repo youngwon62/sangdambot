@@ -14,7 +14,7 @@ TELEGRAM_BOT_TOKEN = "7954320343:AAGGW8K8N3SDfaTeG7VIVhBUcut-T9v1aDY"
 TEACHER_CHAT_ID = "5560273829"
 
 # 학생 코드 DB 로드
-with open("학생코드_인증DB.json", "r", encoding="utf-8") as f:
+with open("student_code_db.json", "r", encoding="utf-8") as f:
     STUDENT_CODE_DB = json.load(f)
 
 # 데이터 모델 정의
