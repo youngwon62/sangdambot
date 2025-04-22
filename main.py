@@ -209,27 +209,26 @@ async def student_info_query(data: dict):
         "조별": student.get("조별활동 참여 패턴")
     }
 
-# 등록된 이름 목록 생성
-registered_names = {info["name"] for info in STUDENT_CODE_DB.values()}
+    # 등록된 이름 목록 생성
+    registered_names = {info["name"] for info in STUDENT_CODE_DB.values()}
 
-def mask_names(text, allowed_names):
-    if not text:
+    def mask_names(text, allowed_names):
+        if not text:
+            return text
+        for word in text.split():
+            if any(name in word for name in allowed_names):
+                continue
+            if len(word) >= 2:
+                text = text.replace(word, word[0] + "○" * (len(word) - 1))
+            else:
+                text = text.replace(word, "비공개")
         return text
-    for word in text.split():
-        if any(name in word for name in allowed_names):
-            continue
-        # 이름 길이에 따라 마스킹 적용
-        if len(word) >= 2:
-            text = text.replace(word, word[0] + "○" * (len(word) - 1))
-        else:
-            text = text.replace(word, "비공개")
-    return text
 
-matched = [v for k, v in keyword_map.items() if k in question]
+    matched = [v for k, v in keyword_map.items() if k in question]
 
-if matched:
-    masked = mask_names(matched[0], registered_names)
-    return {"result": masked}
-else:
-    return {"result": "해당 질문에 대한 정보가 없습니다."}
+    if matched:
+        masked = mask_names(matched[0], registered_names)
+        return {"result": masked}
+    else:
+        return {"result": "해당 질문에 대한 정보가 없습니다."}
 
