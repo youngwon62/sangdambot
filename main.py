@@ -206,7 +206,12 @@ async def student_info_query(data: dict):
         "추이": student.get("성적 추이"),
         "친구": student.get("가까운 친구"),
         "점심": student.get("점심을 함께 먹는 친구"),
-        "조별": student.get("조별활동 참여 패턴")
+        "조별": student.get("조별활동 참여 패턴"),
+        "최근 상담": f"{student.get('last_counseling', {}).get('date', '기록 없음')} - {student.get('last_counseling', {}).get('type', '')}: {student.get('last_counseling', {}).get('summary', '')}",
+        "상담 내용": student.get("last_counseling", {}).get("summary"),
+        "친한 친구": student.get("relationship", {}).get("close_with"),
+        "적대적 관계": student.get("relationship", {}).get("hostile_with"),
+        "관계 설명": student.get("relationship", {}).get("description")
     }
 
     # 등록된 이름 목록 생성
