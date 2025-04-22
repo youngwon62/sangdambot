@@ -79,7 +79,27 @@ async def route_topic(request: Request):
     return {"category": "기타 고민"}
 
 # 상담 요약 이메일 전송 API
+@app.post("/confirm_summary")
+async def confirm_summary(data: EmailSummaryRequest):
+    student_info = STUDENT_CODE_DB.get(data.student_code)
+    if not student_info:
+        return {"status": "error", "message": "학생 코드 오류"}
+
+    confirm_msg = f"""
+📌 상담 요약 확인 요청
+- 학생: {student_info['name']} ({data.student_code})
+- 영역: {data.category}
+- 상담 요청 내용: {data.content}
+- 상담 희망 시간: {data.preferred_time}
+- 요약 내용:
+{data.summary}
+
+이 내용이 맞다면 확인 후 메일과 텔레그램으로 발송됩니다.
+"""
+    return {"status": "pending", "confirm_message": confirm_msg}
+
 @app.post("/send_summary_email")
+
 async def send_summary_email(data: EmailSummaryRequest):
     student_info = STUDENT_CODE_DB.get(data.student_code)
     if not student_info:
@@ -103,6 +123,7 @@ async def send_summary_email(data: EmailSummaryRequest):
             smtp.starttls()
             smtp.login(os.environ.get("EMAIL_USER"), os.environ.get("EMAIL_PASSWORD"))
             smtp.send_message(msg)
-        return {"status": "sent", "email": "hyesulee14@gmail.com"}
+        result = send_to_telegram(TEACHER_CHAT_ID, body)
+return {"status": "sent", "email": "hyesulee14@gmail.com", "telegram_result": result}
     except Exception as e:
         return {"status": "error", "details": str(e)}
