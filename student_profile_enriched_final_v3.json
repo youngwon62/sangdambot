@@ -19,19 +19,49 @@
     "last_counseling": {
       "date": "2025-03-09",
       "type": "생활",
-      "summary": "Nam quia quia neque."
+      "summary": "최근 수업 중 집중이 어렵고, 친구들과의 관계에서도 자신감 결여한 모습을 보입니다."
     },
     "relationship": {
       "close_with": "우지민",
       "hostile_with": "구영수",
       "description": "우지민 학생과 자주 어울리며 조용한 성향을 보임."
     },
-    "지필평가": 74,
-    "수행평가": 82,
-    "학기 종합 성적": 3.82,
     "성적 추이": "유지 중",
     "점심을 함께 먹는 친구": "우지민",
-    "조별활동 참여 패턴": "조용히 따르는 편"
+    "조별활동 참여 패턴": "조용히 따르는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 46,
+        "performance_exam": 42,
+        "total_score": 44.8,
+        "grade": 6
+      },
+      "영어": {
+        "written_exam": 56,
+        "performance_exam": 85,
+        "total_score": 64.7,
+        "grade": 4
+      },
+      "수학": {
+        "written_exam": 49,
+        "performance_exam": 51,
+        "total_score": 49.6,
+        "grade": 6
+      },
+      "사회": {
+        "written_exam": 76,
+        "performance_exam": 96,
+        "total_score": 82.0,
+        "grade": 2
+      },
+      "과학": {
+        "written_exam": 92,
+        "performance_exam": 78,
+        "total_score": 87.8,
+        "grade": 2
+      }
+    },
+    "overall_grade": 4.0
   },
   "P0YKIYGQ": {
     "student_id": "S2025002",
@@ -53,19 +83,49 @@
     "last_counseling": {
       "date": "2025-02-12",
       "type": "성적",
-      "summary": "Repudiandae rem id."
+      "summary": "최근 시험 성적과 수행평가 결과를 볼 때, 학습 습관이나 시간 관리 측면에서 개선이 요구됩니다."
     },
     "relationship": {
       "close_with": "하영일",
       "hostile_with": "박지민",
       "description": "하영일 학생과 점심시간을 함께 보내며 긍정적인 교우 관계를 형성함."
     },
-    "지필평가": 62,
-    "수행평가": 76,
-    "학기 종합 성적": 3.31,
     "성적 추이": "유지 중",
     "점심을 함께 먹는 친구": "하영일",
-    "조별활동 참여 패턴": "관찰 중심"
+    "조별활동 참여 패턴": "관찰 중심",
+    "scores": {
+      "국어": {
+        "written_exam": 79,
+        "performance_exam": 96,
+        "total_score": 84.1,
+        "grade": 2
+      },
+      "영어": {
+        "written_exam": 99,
+        "performance_exam": 53,
+        "total_score": 85.2,
+        "grade": 2
+      },
+      "수학": {
+        "written_exam": 44,
+        "performance_exam": 40,
+        "total_score": 42.8,
+        "grade": 6
+      },
+      "사회": {
+        "written_exam": 79,
+        "performance_exam": 66,
+        "total_score": 75.1,
+        "grade": 3
+      },
+      "과학": {
+        "written_exam": 89,
+        "performance_exam": 83,
+        "total_score": 87.2,
+        "grade": 2
+      }
+    },
+    "overall_grade": 3.0
   },
   "0AAJVD1X": {
     "student_id": "S2025003",
@@ -87,19 +147,49 @@
     "last_counseling": {
       "date": "2025-04-09",
       "type": "성적",
-      "summary": "Vel mollitia illo optio sed."
+      "summary": "최근 시험 성적과 수행평가 결과를 볼 때, 학습 습관이나 시간 관리 측면에서 개선이 요구됩니다."
     },
     "relationship": {
       "close_with": "강준영",
       "hostile_with": "김준호",
       "description": "강준영 학생과 경쟁 의식이 강해 때때로 충돌이 있음."
     },
-    "지필평가": 86,
-    "수행평가": 79,
-    "학기 종합 성적": 4.19,
     "성적 추이": "최근 급상승",
     "점심을 함께 먹는 친구": "강준영",
-    "조별활동 참여 패턴": "소극적 참여"
+    "조별활동 참여 패턴": "소극적 참여",
+    "scores": {
+      "국어": {
+        "written_exam": 96,
+        "performance_exam": 43,
+        "total_score": 80.1,
+        "grade": 2
+      },
+      "영어": {
+        "written_exam": 68,
+        "performance_exam": 87,
+        "total_score": 73.7,
+        "grade": 3
+      },
+      "수학": {
+        "written_exam": 78,
+        "performance_exam": 46,
+        "total_score": 68.4,
+        "grade": 4
+      },
+      "사회": {
+        "written_exam": 63,
+        "performance_exam": 86,
+        "total_score": 69.9,
+        "grade": 4
+      },
+      "과학": {
+        "written_exam": 50,
+        "performance_exam": 69,
+        "total_score": 55.7,
+        "grade": 5
+      }
+    },
+    "overall_grade": 3.6
   },
   "QT2V3W59": {
     "student_id": "S2025004",
@@ -121,19 +211,49 @@
     "last_counseling": {
       "date": "2025-02-15",
       "type": "진로",
-      "summary": "Eum nemo sequi quidem consequuntur."
+      "summary": "교사 진로에 관심이 있으며, 관련 분야에 대한 활동이나 진로 탐색이 필요합니다."
     },
     "relationship": {
       "close_with": "강준영",
       "hostile_with": "서예준",
       "description": "강준영 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
     },
-    "지필평가": 94,
-    "수행평가": 78,
-    "학기 종합 성적": 4.46,
     "성적 추이": "다소 하락",
     "점심을 함께 먹는 친구": "강준영",
-    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+    "조별활동 참여 패턴": "주도적으로 이끄는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 40,
+        "performance_exam": 87,
+        "total_score": 54.1,
+        "grade": 5
+      },
+      "영어": {
+        "written_exam": 61,
+        "performance_exam": 71,
+        "total_score": 64.0,
+        "grade": 4
+      },
+      "수학": {
+        "written_exam": 51,
+        "performance_exam": 50,
+        "total_score": 50.7,
+        "grade": 5
+      },
+      "사회": {
+        "written_exam": 75,
+        "performance_exam": 52,
+        "total_score": 68.1,
+        "grade": 4
+      },
+      "과학": {
+        "written_exam": 82,
+        "performance_exam": 79,
+        "total_score": 81.1,
+        "grade": 2
+      }
+    },
+    "overall_grade": 4.0
   },
   "XTTIKD41": {
     "student_id": "S2025005",
@@ -155,19 +275,49 @@
     "last_counseling": {
       "date": "2025-01-17",
       "type": "생활",
-      "summary": "Doloribus quos quia."
+      "summary": "최근 수업 중 집중이 어렵고, 친구들과의 관계에서도 긍정적한 모습을 보입니다."
     },
     "relationship": {
       "close_with": "서예준",
       "hostile_with": "김상호",
       "description": "서예준 학생과 경쟁 의식이 강해 때때로 충돌이 있음."
     },
-    "지필평가": 62,
-    "수행평가": 62,
-    "학기 종합 성적": 3.1,
     "성적 추이": "최근 급상승",
     "점심을 함께 먹는 친구": "서예준",
-    "조별활동 참여 패턴": "의견을 잘 조율함"
+    "조별활동 참여 패턴": "의견을 잘 조율함",
+    "scores": {
+      "국어": {
+        "written_exam": 84,
+        "performance_exam": 72,
+        "total_score": 80.4,
+        "grade": 2
+      },
+      "영어": {
+        "written_exam": 100,
+        "performance_exam": 71,
+        "total_score": 91.3,
+        "grade": 1
+      },
+      "수학": {
+        "written_exam": 47,
+        "performance_exam": 47,
+        "total_score": 47.0,
+        "grade": 6
+      },
+      "사회": {
+        "written_exam": 87,
+        "performance_exam": 73,
+        "total_score": 82.8,
+        "grade": 2
+      },
+      "과학": {
+        "written_exam": 94,
+        "performance_exam": 77,
+        "total_score": 88.9,
+        "grade": 2
+      }
+    },
+    "overall_grade": 2.6
   },
   "C5XUQVU2": {
     "student_id": "S2025006",
@@ -189,19 +339,49 @@
     "last_counseling": {
       "date": "2025-01-09",
       "type": "생활",
-      "summary": "Nobis amet modi ipsa tenetur."
+      "summary": "최근 수업 중 집중이 어렵고, 친구들과의 관계에서도 불안정함한 모습을 보입니다."
     },
     "relationship": {
       "close_with": "최승민",
       "hostile_with": "이영길",
       "description": "최승민 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
     },
-    "지필평가": 71,
-    "수행평가": 75,
-    "학기 종합 성적": 3.61,
     "성적 추이": "상승 중",
     "점심을 함께 먹는 친구": "최승민",
-    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+    "조별활동 참여 패턴": "주도적으로 이끄는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 99,
+        "performance_exam": 97,
+        "total_score": 98.4,
+        "grade": 1
+      },
+      "영어": {
+        "written_exam": 95,
+        "performance_exam": 69,
+        "total_score": 87.2,
+        "grade": 2
+      },
+      "수학": {
+        "written_exam": 62,
+        "performance_exam": 43,
+        "total_score": 56.3,
+        "grade": 5
+      },
+      "사회": {
+        "written_exam": 79,
+        "performance_exam": 50,
+        "total_score": 70.3,
+        "grade": 3
+      },
+      "과학": {
+        "written_exam": 85,
+        "performance_exam": 83,
+        "total_score": 84.4,
+        "grade": 2
+      }
+    },
+    "overall_grade": 2.6
   },
   "LCZ3SXDV": {
     "student_id": "S2025007",
@@ -223,19 +403,49 @@
     "last_counseling": {
       "date": "2025-02-11",
       "type": "성적",
-      "summary": "Officiis iusto expedita neque ex."
+      "summary": "최근 시험 성적과 수행평가 결과를 볼 때, 학습 습관이나 시간 관리 측면에서 개선이 요구됩니다."
     },
     "relationship": {
       "close_with": "구영수",
       "hostile_with": "서예준",
       "description": "구영수 학생과 같은 진로 목표를 공유하며 협력하는 경향이 있음."
     },
-    "지필평가": 72,
-    "수행평가": 92,
-    "학기 종합 성적": 3.9,
     "성적 추이": "다소 하락",
     "점심을 함께 먹는 친구": "구영수",
-    "조별활동 참여 패턴": "관찰 중심"
+    "조별활동 참여 패턴": "관찰 중심",
+    "scores": {
+      "국어": {
+        "written_exam": 81,
+        "performance_exam": 83,
+        "total_score": 81.6,
+        "grade": 2
+      },
+      "영어": {
+        "written_exam": 71,
+        "performance_exam": 73,
+        "total_score": 71.6,
+        "grade": 3
+      },
+      "수학": {
+        "written_exam": 89,
+        "performance_exam": 85,
+        "total_score": 87.8,
+        "grade": 2
+      },
+      "사회": {
+        "written_exam": 58,
+        "performance_exam": 87,
+        "total_score": 66.7,
+        "grade": 4
+      },
+      "과학": {
+        "written_exam": 68,
+        "performance_exam": 69,
+        "total_score": 68.3,
+        "grade": 4
+      }
+    },
+    "overall_grade": 3.0
   },
   "H00K6GXH": {
     "student_id": "S2025008",
@@ -257,19 +467,49 @@
     "last_counseling": {
       "date": "2025-02-09",
       "type": "진로",
-      "summary": "Fugiat doloremque beatae assumenda in expedita."
+      "summary": "연구원 진로에 관심이 있으며, 관련 분야에 대한 활동이나 진로 탐색이 필요합니다."
     },
     "relationship": {
       "close_with": "윤하은",
       "hostile_with": "정승민",
       "description": "윤하은 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
     },
-    "지필평가": 99,
-    "수행평가": 79,
-    "학기 종합 성적": 4.65,
     "성적 추이": "최근 급상승",
     "점심을 함께 먹는 친구": "윤하은",
-    "조별활동 참여 패턴": "조용히 따르는 편"
+    "조별활동 참여 패턴": "조용히 따르는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 82,
+        "performance_exam": 82,
+        "total_score": 82.0,
+        "grade": 2
+      },
+      "영어": {
+        "written_exam": 44,
+        "performance_exam": 94,
+        "total_score": 59.0,
+        "grade": 5
+      },
+      "수학": {
+        "written_exam": 74,
+        "performance_exam": 72,
+        "total_score": 73.4,
+        "grade": 3
+      },
+      "사회": {
+        "written_exam": 93,
+        "performance_exam": 58,
+        "total_score": 82.5,
+        "grade": 2
+      },
+      "과학": {
+        "written_exam": 45,
+        "performance_exam": 53,
+        "total_score": 47.4,
+        "grade": 6
+      }
+    },
+    "overall_grade": 3.6
   },
   "VN78ZQCD": {
     "student_id": "S2025009",
@@ -291,19 +531,49 @@
     "last_counseling": {
       "date": "2025-01-09",
       "type": "성적",
-      "summary": "Fugiat hic libero dolorem."
+      "summary": "최근 시험 성적과 수행평가 결과를 볼 때, 학습 습관이나 시간 관리 측면에서 개선이 요구됩니다."
     },
     "relationship": {
       "close_with": "조우진",
       "hostile_with": "송지우",
       "description": "조우진 학생과 같은 진로 목표를 공유하며 협력하는 경향이 있음."
     },
-    "지필평가": 84,
-    "수행평가": 99,
-    "학기 종합 성적": 4.42,
     "성적 추이": "최근 급상승",
     "점심을 함께 먹는 친구": "조우진",
-    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+    "조별활동 참여 패턴": "주도적으로 이끄는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 49,
+        "performance_exam": 41,
+        "total_score": 46.6,
+        "grade": 6
+      },
+      "영어": {
+        "written_exam": 95,
+        "performance_exam": 47,
+        "total_score": 80.6,
+        "grade": 2
+      },
+      "수학": {
+        "written_exam": 77,
+        "performance_exam": 90,
+        "total_score": 80.9,
+        "grade": 2
+      },
+      "사회": {
+        "written_exam": 79,
+        "performance_exam": 64,
+        "total_score": 74.5,
+        "grade": 3
+      },
+      "과학": {
+        "written_exam": 66,
+        "performance_exam": 70,
+        "total_score": 67.2,
+        "grade": 4
+      }
+    },
+    "overall_grade": 3.4
   },
   "PIQBQHOL": {
     "student_id": "S2025010",
@@ -325,19 +595,49 @@
     "last_counseling": {
       "date": "2025-04-01",
       "type": "생활",
-      "summary": "Voluptatem enim animi saepe porro deserunt nisi."
+      "summary": "최근 수업 중 집중이 어렵고, 친구들과의 관계에서도 자신감 결여한 모습을 보입니다."
     },
     "relationship": {
       "close_with": "구영수",
       "hostile_with": "박지민",
       "description": "구영수 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
     },
-    "지필평가": 79,
-    "수행평가": 69,
-    "학기 종합 성적": 3.8,
     "성적 추이": "다소 하락",
     "점심을 함께 먹는 친구": "구영수",
-    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+    "조별활동 참여 패턴": "주도적으로 이끄는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 75,
+        "performance_exam": 83,
+        "total_score": 77.4,
+        "grade": 3
+      },
+      "영어": {
+        "written_exam": 69,
+        "performance_exam": 75,
+        "total_score": 70.8,
+        "grade": 3
+      },
+      "수학": {
+        "written_exam": 91,
+        "performance_exam": 55,
+        "total_score": 80.2,
+        "grade": 2
+      },
+      "사회": {
+        "written_exam": 48,
+        "performance_exam": 57,
+        "total_score": 50.7,
+        "grade": 5
+      },
+      "과학": {
+        "written_exam": 77,
+        "performance_exam": 86,
+        "total_score": 79.7,
+        "grade": 3
+      }
+    },
+    "overall_grade": 3.2
   },
   "98C22LYA": {
     "student_id": "S2025011",
@@ -359,19 +659,49 @@
     "last_counseling": {
       "date": "2025-01-08",
       "type": "성적",
-      "summary": "Perspiciatis dolor sit excepturi."
+      "summary": "최근 시험 성적과 수행평가 결과를 볼 때, 학습 습관이나 시간 관리 측면에서 개선이 요구됩니다."
     },
     "relationship": {
       "close_with": "이영길",
       "hostile_with": "김상호",
       "description": "이영길 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
     },
-    "지필평가": 86,
-    "수행평가": 94,
-    "학기 종합 성적": 4.42,
     "성적 추이": "상승 중",
     "점심을 함께 먹는 친구": "이영길",
-    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+    "조별활동 참여 패턴": "주도적으로 이끄는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 54,
+        "performance_exam": 40,
+        "total_score": 49.8,
+        "grade": 6
+      },
+      "영어": {
+        "written_exam": 91,
+        "performance_exam": 56,
+        "total_score": 80.5,
+        "grade": 2
+      },
+      "수학": {
+        "written_exam": 40,
+        "performance_exam": 43,
+        "total_score": 40.9,
+        "grade": 6
+      },
+      "사회": {
+        "written_exam": 56,
+        "performance_exam": 49,
+        "total_score": 53.9,
+        "grade": 5
+      },
+      "과학": {
+        "written_exam": 58,
+        "performance_exam": 89,
+        "total_score": 67.3,
+        "grade": 4
+      }
+    },
+    "overall_grade": 4.6
   },
   "9Y3L7Q6L": {
     "student_id": "S2025012",
@@ -393,19 +723,49 @@
     "last_counseling": {
       "date": "2025-01-30",
       "type": "성적",
-      "summary": "Reprehenderit minima ad vero asperiores eligendi."
+      "summary": "최근 시험 성적과 수행평가 결과를 볼 때, 학습 습관이나 시간 관리 측면에서 개선이 요구됩니다."
     },
     "relationship": {
       "close_with": "장지현",
       "hostile_with": "윤하은",
       "description": "장지현 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
     },
-    "지필평가": 89,
-    "수행평가": 93,
-    "학기 종합 성적": 4.51,
     "성적 추이": "다소 하락",
     "점심을 함께 먹는 친구": "장지현",
-    "조별활동 참여 패턴": "관찰 중심"
+    "조별활동 참여 패턴": "관찰 중심",
+    "scores": {
+      "국어": {
+        "written_exam": 44,
+        "performance_exam": 94,
+        "total_score": 59.0,
+        "grade": 5
+      },
+      "영어": {
+        "written_exam": 88,
+        "performance_exam": 82,
+        "total_score": 86.2,
+        "grade": 2
+      },
+      "수학": {
+        "written_exam": 66,
+        "performance_exam": 50,
+        "total_score": 61.2,
+        "grade": 4
+      },
+      "사회": {
+        "written_exam": 64,
+        "performance_exam": 86,
+        "total_score": 70.6,
+        "grade": 3
+      },
+      "과학": {
+        "written_exam": 42,
+        "performance_exam": 44,
+        "total_score": 42.6,
+        "grade": 6
+      }
+    },
+    "overall_grade": 4.0
   },
   "64FW3ZCJ": {
     "student_id": "S2025013",
@@ -427,19 +787,49 @@
     "last_counseling": {
       "date": "2025-01-16",
       "type": "진로",
-      "summary": "Sed eos consequuntur."
+      "summary": "엔지니어 진로에 관심이 있으며, 관련 분야에 대한 활동이나 진로 탐색이 필요합니다."
     },
     "relationship": {
       "close_with": "박지민",
       "hostile_with": "정승민",
       "description": "박지민 학생과 자주 어울리며 조용한 성향을 보임."
     },
-    "지필평가": 69,
-    "수행평가": 81,
-    "학기 종합 성적": 3.63,
     "성적 추이": "최근 급상승",
     "점심을 함께 먹는 친구": "박지민",
-    "조별활동 참여 패턴": "의견을 잘 조율함"
+    "조별활동 참여 패턴": "의견을 잘 조율함",
+    "scores": {
+      "국어": {
+        "written_exam": 85,
+        "performance_exam": 83,
+        "total_score": 84.4,
+        "grade": 2
+      },
+      "영어": {
+        "written_exam": 100,
+        "performance_exam": 99,
+        "total_score": 99.7,
+        "grade": 1
+      },
+      "수학": {
+        "written_exam": 90,
+        "performance_exam": 89,
+        "total_score": 89.7,
+        "grade": 2
+      },
+      "사회": {
+        "written_exam": 85,
+        "performance_exam": 96,
+        "total_score": 88.3,
+        "grade": 2
+      },
+      "과학": {
+        "written_exam": 85,
+        "performance_exam": 43,
+        "total_score": 72.4,
+        "grade": 3
+      }
+    },
+    "overall_grade": 2.0
   },
   "406AUZ9X": {
     "student_id": "S2025014",
@@ -461,19 +851,49 @@
     "last_counseling": {
       "date": "2025-01-18",
       "type": "생활",
-      "summary": "Molestiae reiciendis accusamus quibusdam soluta fuga modi suscipit."
+      "summary": "최근 수업 중 집중이 어렵고, 친구들과의 관계에서도 안정적한 모습을 보입니다."
     },
     "relationship": {
       "close_with": "장서현",
       "hostile_with": "김준호",
       "description": "장서현 학생과 자주 어울리며 조용한 성향을 보임."
     },
-    "지필평가": 86,
-    "수행평가": 72,
-    "학기 종합 성적": 4.09,
     "성적 추이": "최근 급상승",
     "점심을 함께 먹는 친구": "장서현",
-    "조별활동 참여 패턴": "소극적 참여"
+    "조별활동 참여 패턴": "소극적 참여",
+    "scores": {
+      "국어": {
+        "written_exam": 44,
+        "performance_exam": 87,
+        "total_score": 56.9,
+        "grade": 5
+      },
+      "영어": {
+        "written_exam": 60,
+        "performance_exam": 63,
+        "total_score": 60.9,
+        "grade": 4
+      },
+      "수학": {
+        "written_exam": 87,
+        "performance_exam": 64,
+        "total_score": 80.1,
+        "grade": 2
+      },
+      "사회": {
+        "written_exam": 74,
+        "performance_exam": 52,
+        "total_score": 67.4,
+        "grade": 4
+      },
+      "과학": {
+        "written_exam": 61,
+        "performance_exam": 98,
+        "total_score": 72.1,
+        "grade": 3
+      }
+    },
+    "overall_grade": 3.6
   },
   "XZLLUH1Q": {
     "student_id": "S2025015",
@@ -495,19 +915,49 @@
     "last_counseling": {
       "date": "2025-04-04",
       "type": "진로",
-      "summary": "Officia iusto omnis dolor earum."
+      "summary": "디자이너 진로에 관심이 있으며, 관련 분야에 대한 활동이나 진로 탐색이 필요합니다."
     },
     "relationship": {
       "close_with": "우지민",
       "hostile_with": "이서영",
       "description": "우지민 학생과 자주 어울리며 조용한 성향을 보임."
     },
-    "지필평가": 82,
-    "수행평가": 95,
-    "학기 종합 성적": 4.29,
     "성적 추이": "상승 중",
     "점심을 함께 먹는 친구": "우지민",
-    "조별활동 참여 패턴": "조용히 따르는 편"
+    "조별활동 참여 패턴": "조용히 따르는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 80,
+        "performance_exam": 63,
+        "total_score": 74.9,
+        "grade": 3
+      },
+      "영어": {
+        "written_exam": 54,
+        "performance_exam": 94,
+        "total_score": 66.0,
+        "grade": 4
+      },
+      "수학": {
+        "written_exam": 84,
+        "performance_exam": 40,
+        "total_score": 70.8,
+        "grade": 3
+      },
+      "사회": {
+        "written_exam": 50,
+        "performance_exam": 45,
+        "total_score": 48.5,
+        "grade": 6
+      },
+      "과학": {
+        "written_exam": 80,
+        "performance_exam": 45,
+        "total_score": 69.5,
+        "grade": 4
+      }
+    },
+    "overall_grade": 4.0
   },
   "CW50Q91S": {
     "student_id": "S2025016",
@@ -529,19 +979,49 @@
     "last_counseling": {
       "date": "2025-04-04",
       "type": "성적",
-      "summary": "Accusamus molestias minima odio animi vel quibusdam."
+      "summary": "최근 시험 성적과 수행평가 결과를 볼 때, 학습 습관이나 시간 관리 측면에서 개선이 요구됩니다."
     },
     "relationship": {
       "close_with": "강명자",
       "hostile_with": "서예준",
       "description": "강명자 학생과 점심시간을 함께 보내며 긍정적인 교우 관계를 형성함."
     },
-    "지필평가": 71,
-    "수행평가": 66,
-    "학기 종합 성적": 3.48,
     "성적 추이": "상승 중",
     "점심을 함께 먹는 친구": "강명자",
-    "조별활동 참여 패턴": "의견을 잘 조율함"
+    "조별활동 참여 패턴": "의견을 잘 조율함",
+    "scores": {
+      "국어": {
+        "written_exam": 77,
+        "performance_exam": 40,
+        "total_score": 65.9,
+        "grade": 4
+      },
+      "영어": {
+        "written_exam": 72,
+        "performance_exam": 100,
+        "total_score": 80.4,
+        "grade": 2
+      },
+      "수학": {
+        "written_exam": 45,
+        "performance_exam": 55,
+        "total_score": 48.0,
+        "grade": 6
+      },
+      "사회": {
+        "written_exam": 53,
+        "performance_exam": 75,
+        "total_score": 59.6,
+        "grade": 5
+      },
+      "과학": {
+        "written_exam": 91,
+        "performance_exam": 61,
+        "total_score": 82.0,
+        "grade": 2
+      }
+    },
+    "overall_grade": 3.8
   },
   "0N1OEN85": {
     "student_id": "S2025017",
@@ -563,19 +1043,49 @@
     "last_counseling": {
       "date": "2025-01-04",
       "type": "진로",
-      "summary": "Nihil ipsum optio dolor numquam."
+      "summary": "간호사 진로에 관심이 있으며, 관련 분야에 대한 활동이나 진로 탐색이 필요합니다."
     },
     "relationship": {
       "close_with": "권광수",
       "hostile_with": "송지우",
       "description": "권광수 학생과 경쟁 의식이 강해 때때로 충돌이 있음."
     },
-    "지필평가": 62,
-    "수행평가": 62,
-    "학기 종합 성적": 3.1,
     "성적 추이": "최근 급상승",
     "점심을 함께 먹는 친구": "권광수",
-    "조별활동 참여 패턴": "주도적으로 이끄는 편"
+    "조별활동 참여 패턴": "주도적으로 이끄는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 56,
+        "performance_exam": 83,
+        "total_score": 64.1,
+        "grade": 4
+      },
+      "영어": {
+        "written_exam": 96,
+        "performance_exam": 59,
+        "total_score": 84.9,
+        "grade": 2
+      },
+      "수학": {
+        "written_exam": 90,
+        "performance_exam": 67,
+        "total_score": 83.1,
+        "grade": 2
+      },
+      "사회": {
+        "written_exam": 67,
+        "performance_exam": 98,
+        "total_score": 76.3,
+        "grade": 3
+      },
+      "과학": {
+        "written_exam": 88,
+        "performance_exam": 74,
+        "total_score": 83.8,
+        "grade": 2
+      }
+    },
+    "overall_grade": 2.6
   },
   "AQA7E4PX": {
     "student_id": "S2025018",
@@ -597,19 +1107,49 @@
     "last_counseling": {
       "date": "2025-02-18",
       "type": "성적",
-      "summary": "Exercitationem sed officiis pariatur at sed."
+      "summary": "최근 시험 성적과 수행평가 결과를 볼 때, 학습 습관이나 시간 관리 측면에서 개선이 요구됩니다."
     },
     "relationship": {
       "close_with": "강명자",
       "hostile_with": "구영수",
       "description": "강명자 학생과 자주 어울리며 조용한 성향을 보임."
     },
-    "지필평가": 63,
-    "수행평가": 98,
-    "학기 종합 성적": 3.67,
     "성적 추이": "최근 급상승",
     "점심을 함께 먹는 친구": "강명자",
-    "조별활동 참여 패턴": "관찰 중심"
+    "조별활동 참여 패턴": "관찰 중심",
+    "scores": {
+      "국어": {
+        "written_exam": 52,
+        "performance_exam": 92,
+        "total_score": 64.0,
+        "grade": 4
+      },
+      "영어": {
+        "written_exam": 83,
+        "performance_exam": 41,
+        "total_score": 70.4,
+        "grade": 3
+      },
+      "수학": {
+        "written_exam": 82,
+        "performance_exam": 50,
+        "total_score": 72.4,
+        "grade": 3
+      },
+      "사회": {
+        "written_exam": 58,
+        "performance_exam": 90,
+        "total_score": 67.6,
+        "grade": 4
+      },
+      "과학": {
+        "written_exam": 42,
+        "performance_exam": 58,
+        "total_score": 46.8,
+        "grade": 6
+      }
+    },
+    "overall_grade": 4.0
   },
   "MVFE2RAH": {
     "student_id": "S2025019",
@@ -631,19 +1171,49 @@
     "last_counseling": {
       "date": "2025-03-23",
       "type": "성적",
-      "summary": "Omnis porro id atque similique voluptatum."
+      "summary": "최근 시험 성적과 수행평가 결과를 볼 때, 학습 습관이나 시간 관리 측면에서 개선이 요구됩니다."
     },
     "relationship": {
       "close_with": "강준영",
       "hostile_with": "최민재",
       "description": "강준영 학생과 점심시간을 함께 보내며 긍정적인 교우 관계를 형성함."
     },
-    "지필평가": 83,
-    "수행평가": 72,
-    "학기 종합 성적": 3.98,
     "성적 추이": "다소 하락",
     "점심을 함께 먹는 친구": "강준영",
-    "조별활동 참여 패턴": "조용히 따르는 편"
+    "조별활동 참여 패턴": "조용히 따르는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 97,
+        "performance_exam": 87,
+        "total_score": 94.0,
+        "grade": 1
+      },
+      "영어": {
+        "written_exam": 84,
+        "performance_exam": 56,
+        "total_score": 75.6,
+        "grade": 3
+      },
+      "수학": {
+        "written_exam": 79,
+        "performance_exam": 86,
+        "total_score": 81.1,
+        "grade": 2
+      },
+      "사회": {
+        "written_exam": 77,
+        "performance_exam": 70,
+        "total_score": 74.9,
+        "grade": 3
+      },
+      "과학": {
+        "written_exam": 82,
+        "performance_exam": 41,
+        "total_score": 69.7,
+        "grade": 4
+      }
+    },
+    "overall_grade": 2.6
   },
   "JSDB63TU": {
     "student_id": "S2025020",
@@ -665,18 +1235,48 @@
     "last_counseling": {
       "date": "2025-01-09",
       "type": "생활",
-      "summary": "Qui alias suscipit ratione dignissimos asperiores sapiente."
+      "summary": "최근 수업 중 집중이 어렵고, 친구들과의 관계에서도 화가 많음한 모습을 보입니다."
     },
     "relationship": {
       "close_with": "구영수",
       "hostile_with": "김상호",
       "description": "구영수 학생과는 가끔 거리감이 있으나 최근 친밀도가 증가함."
     },
-    "지필평가": 91,
-    "수행평가": 75,
-    "학기 종합 성적": 4.31,
     "성적 추이": "다소 하락",
     "점심을 함께 먹는 친구": "구영수",
-    "조별활동 참여 패턴": "조용히 따르는 편"
+    "조별활동 참여 패턴": "조용히 따르는 편",
+    "scores": {
+      "국어": {
+        "written_exam": 81,
+        "performance_exam": 87,
+        "total_score": 82.8,
+        "grade": 2
+      },
+      "영어": {
+        "written_exam": 80,
+        "performance_exam": 84,
+        "total_score": 81.2,
+        "grade": 2
+      },
+      "수학": {
+        "written_exam": 82,
+        "performance_exam": 58,
+        "total_score": 74.8,
+        "grade": 3
+      },
+      "사회": {
+        "written_exam": 80,
+        "performance_exam": 55,
+        "total_score": 72.5,
+        "grade": 3
+      },
+      "과학": {
+        "written_exam": 83,
+        "performance_exam": 77,
+        "total_score": 81.2,
+        "grade": 2
+      }
+    },
+    "overall_grade": 2.4
   }
 }
