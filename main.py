@@ -202,48 +202,76 @@ async def student_info_query(data: dict):
     current_student_name = student.get("name", "")
     registered_names = {info["name"] for info in STUDENT_CODE_DB.values()}
 
-    # 조회 키워드 매핑
+    # 🔑 키워드 → 필드 경로 매핑
     keyword_map = {
-        "지필": student.get("지필평가"),
-        "수행": student.get("수행평가"),
-        "종합": student.get("학기 종합 성적"),
-        "추이": student.get("성적 추이"),
-        "친한 친구": student.get("relationship", {}).get("close_with"),
-        "가까운 친구": student.get("relationship", {}).get("close_with"),
-        "친구": student.get("relationship", {}).get("close_with"),
-        "적대적 관계": student.get("relationship", {}).get("hostile_with"),
-        "갈등": student.get("relationship", {}).get("hostile_with"),
-        "관계 설명": student.get("relationship", {}).get("description"),
-        "최근 상담": f"{student.get('last_counseling', {}).get('date', '기록 없음')} - {student.get('last_counseling', {}).get('type', '')}: {student.get('last_counseling', {}).get('summary', '')}",
-        "상담 내용": student.get("last_counseling", {}).get("summary"),
-        "점심": student.get("점심을 함께 먹는 친구"),
-        "조별": student.get("조별활동 참여 패턴")
+        "주소": "address",
+        "생일": "birth",
+        "반": "class",
+        "진로": "dream_job",
+        "감정 상태": "emotional_state",
+        "학년": "grade",
+        "상담 일자": "last_counseling.date",
+        "상담 내용": "last_counseling.summary",
+        "상담 유형": "last_counseling.type",
+        "이름": "name",
+        "번호": "number",
+        "종합 성적": "overall_grade",
+        "친한 친구": "relationship.close_with",
+        "관계 설명": "relationship.description",
+        "적대적 관계": "relationship.hostile_with",
+        "국어 지필": "scores.국어.written_exam",
+        "국어 수행": "scores.국어.performance_exam",
+        "국어 총점": "scores.국어.total_score",
+        "국어 등급": "scores.국어.grade",
+        "영어 지필": "scores.영어.written_exam",
+        "영어 수행": "scores.영어.performance_exam",
+        "영어 총점": "scores.영어.total_score",
+        "영어 등급": "scores.영어.grade",
+        "수학 지필": "scores.수학.written_exam",
+        "수학 수행": "scores.수학.performance_exam",
+        "수학 총점": "scores.수학.total_score",
+        "수학 등급": "scores.수학.grade",
+        "사회 지필": "scores.사회.written_exam",
+        "사회 수행": "scores.사회.performance_exam",
+        "사회 총점": "scores.사회.total_score",
+        "사회 등급": "scores.사회.grade",
+        "과학 지필": "scores.과학.written_exam",
+        "과학 수행": "scores.과학.performance_exam",
+        "과학 총점": "scores.과학.total_score",
+        "과학 등급": "scores.과학.grade",
+        "학생코드": "student_id",
+        "추이": "성적 추이",
+        "점심": "점심을 함께 먹는 친구",
+        "조별": "조별활동 참여 패턴"
     }
 
-    # ✔ 마스킹 함수
-    def mask_names(text, allowed_names, current_name):
-        if not isinstance(text, str):
-            return str(text) if text is not None else "정보 없음"
+    # 🔍 키워드 매칭
+    matched_key = next((k for k in keyword_map if k in question), None)
+    if not matched_key:
+        return {"result": "해당 질문에 대한 정보가 없습니다."}
 
+    # 🧠 안전한 필드 경로 탐색
+    field_path = keyword_map[matched_key].split(".")
+    value = student
+    for key in field_path:
+        if isinstance(value, dict):
+            value = value.get(key)
+        else:
+            value = None
+            break
+
+    if value is None:
+        return {"result": "해당 정보가 등록되어 있지 않습니다."}
+
+    # ✔ 이름 마스킹 처리
+    def mask_names(value, allowed_names, current_name):
+        if isinstance(value, list):
+            return [mask_names(v, allowed_names, current_name) for v in value]
+        elif not isinstance(value, str):
+            return str(value)
         for name in allowed_names:
-            if name == current_name:
-                continue  # 본인 이름은 마스킹하지 않음
-            if name in text:
-                masked = name[0] + "○" * 2
-                text = text.replace(name, masked)
-        return text
+            if name != current_name:
+                value = value.replace(name, name[0] + "○" * 2)
+        return value
 
-    matched = next((v for k, v in keyword_map.items() if k in question and v), None)
-
-    if matched:
-        masked = mask_names(matched, registered_names, current_student_name)
-        return {"result": masked}
-    else:
-        return {"result": "해당 질문에 대한 정보가 없습니다."}
-
-
-    if matched and matched[0]:
-        masked = mask_names(matched[0], registered_names)
-        return {"result": masked}
-    else:
-        return {"result": "해당 질문에 대한 정보가 없습니다."}
+    return {"result": mask_names(value, registered_names, current_student_name)}
