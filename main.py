@@ -10,6 +10,8 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 import os
+import pandas as pd
+import re
 
 app = FastAPI()
 
@@ -275,3 +277,46 @@ async def student_info_query(data: dict):
         return value
 
     return {"result": mask_names(value, registered_names, current_student_name)}
+
+# --- 학사일정 CSV 로드 ---
+SCHEDULE_CSV_PATH = "/mnt/data/정리된_학사일정.csv"
+try:
+    schedule_df = pd.read_csv(SCHEDULE_CSV_PATH)
+except Exception as e:
+    print(f"CSV 파일을 불러오는 중 오류 발생: {e}")
+    schedule_df = pd.DataFrame(columns=["날짜", "일정"])  # 비어 있는 경우 대비
+
+@app.post("/search_schedule")
+async def search_schedule(request: Request):
+    data = await request.json()
+    month = data.get("month")
+    day = data.get("day")  # day는 선택적
+
+    if not month:
+        return {"result": "요청에 월(month) 정보가 필요합니다."}
+
+    year = 2025  # 기본은 2025년으로 고정
+
+    if month < 1 or month > 12:
+        return {"result": "올바른 월(month)을 입력해 주세요."}
+
+    if day:
+        if day < 1 or day > 31:
+            return {"result": "올바른 일(day)을 입력해 주세요."}
+        target_date = f"{year}-{month:02d}-{day:02d}"
+        filtered = schedule_df[schedule_df["날짜"] == target_date]
+
+        if not filtered.empty:
+            result_text = " / ".join(f"{row['날짜']} 일정: {row['일정']}" for _, row in filtered.iterrows())
+            return {"result": result_text}
+        else:
+            return {"result": "등록된 일정이 없습니다."}
+
+    else:
+        filtered = schedule_df[schedule_df["날짜"].str.startswith(f"{year}-{month:02d}")]
+
+        if not filtered.empty:
+            result_text = " / ".join(f"{row['날짜']} 일정: {row['일정']}" for _, row in filtered.iterrows())
+            return {"result": result_text}
+        else:
+            return {"result": "등록된 일정이 없습니다."}
