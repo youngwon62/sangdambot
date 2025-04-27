@@ -279,7 +279,7 @@ async def student_info_query(data: dict):
     return {"result": mask_names(value, registered_names, current_student_name)}
 
 # --- 학사일정 CSV 로드 ---
-SCHEDULE_CSV_PATH = "/mnt/data/정리된_학사일정.csv"
+SCHEDULE_CSV_PATH = "Calendar.csv"
 try:
     schedule_df = pd.read_csv(SCHEDULE_CSV_PATH)
 except Exception as e:
